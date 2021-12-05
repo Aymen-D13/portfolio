@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<link href="font/font-awesome.min.css" rel="stylesheet" />
+	<title>Aymen Ammam || full-stack web developer </title>
+	<style>
+		/* navigation */
+ .info a {
+	 padding: 10px;
+	 margin-left: 10px;
+	 border-radius: 25px;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 letter-spacing: 2px;
+	 color: black;
+     padding: 10px 10px;
+}
+ .info a:hover {
+	 background: #34495e;
+	 padding: 10px;
+	 border-radius: 25px;
+	 transition: all 0.5s ease;
+     color: white;
+}
+.home{
+	min-height: 100vh;
+}
+ .navbar{
+ 	margin-left: 5%;
+ 	margin-top: 25px;
+ 	width: 90%;
+ 	height: 50px;
+ 	font-family: 'Roboto Condensed', sans-serif;
+ 	font-weight: bold;
+	font-size: 15px;
+ }
+ .logo{
+ 	float: left;
+ }
+ .info{
+ 	float: right;
+ }
+ #background {
+	 position: absolute;
+	 bottom: 0px;
+	 right: 0px;
+	 width: 50%;
+	 height: 100%;
+	 background: #5b2e9a;
+	 -webkit-clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+	 clip-path: polygon(40% 8%, 100% 8%, 100% 100%, 10% 100%);
+	 z-index: -1;
+	 transition: all 0.8s ease;
+}
+ .section {
+	 position: absolute;
+	 margin-top: 5%;
+	 margin-left: 5%;
+}
+h1 {
+	 font-family: 'Roboto Condensed', sans-serif;
+	 color: #5b2e9a;
+	 text-transform: uppercase;
+	 font-size: 2.5em;
+	  
+}
+h2 {
+	 font-size: 1.2em;
+	 text-transform: uppercase;
+	 margin-top: -20px;
+	 letter-spacing: 3px;
+	 font-family: 'Roboto Condensed', sans-serif;
+	 color: #373449;
+}
+ .design{
+ 	margin-top: 7%;
+ 	margin-left: 65%;
+ }
+ .logo1{
+ 	margin-left: 25%;
+ 	margin-top: -15%;
+ }
+ .about{
+ 	margin-top: 5%;
+ 	min-height: 70vh;
+ 	background-color: : #5b2e9a;
+ }
+ .section2 {
+ 	position: relative;
+	box-shadow: 4px 10px 20px rgba(55, 52, 73, .4);
+ 	height: 600px;
+	 width: 900px;
+ 	min-height: 50vh;
+ 	margin: 5% auto;
+ }
+
+ .titre{
+ 	padding-top: 50px;
+ 	text-align: center;
+ }
+.titre1{
+ 	padding-top: 20px;
+ 	text-align: center;
+ }
+.logo2 img{
+  padding-left: 40%;
+  width: 20%;
+}
+html,body{
+  margin:0;
+  height:100%;
+}
+p {
+	 font-family: 'Roboto Condensed', sans-serif;
+	 font-size: 0.8em;
+	 text-align: center;
+	 letter-spacing: 2px;
+	 display: inline-block;
+	 padding: 0 45px;
+	 text-transform: uppercase;
+	 color: #373449;
+}
+.Portfolio{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+}
+.exmpl{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.Menu{
+	width: 70%;
+	margin-left: 15%;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  position: relative;	
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.column .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  transition: .5s ease;
+}
+
+.column:hover .overlay {
+  height: 100%;
+}
+.minnav {
+  display: none;
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.minnav #myLinks {
+  display: none;
+}
+
+.minnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.minnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.minnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.minnav .active1 {
+  background-color: #5b2e9a;
+  color: white;
+}
+.text {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  width: 30%;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.seemore {display: none;}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .seemore { display: block; }
+  .navbar{display: none;}
+  .minnav{display: block;}
+  .section2{width: 100%;}
+  .home {background: #5b2e9a;}
+  .section h1 {color: white;}
+  .section h2 {color: white;}
+  .design{display: none;}
+  .seemore{color: white; padding-top: 150%; padding-left: 50%;}
+  .logo2 img{width: 50%; padding-left: 25%;}
+  .porto{width: 100%;	margin-left: auto;}
+}
+	</style>
+
+</head>
+<body>
+	<nav>
+		<div class="navbar">
+			<div class="logo">
+				<a><img src="Logo Aymen.png" alt="Aymen Ammam || full-stack web developer" height="48"></a>
+			</div>
+			<div class="info">
+				<a href="#about">About</a>
+    			<a href="#Portfolio1">Portfolio</a>
+    			<a href="#contact">Contact me</a>
+			</div>		
+		</div>
+		<!-- phone navigation bar-->
+		<div class="minnav">
+			<a href="#home" class="active1">Aymen</a>
+  			<div id="myLinks">
+    			<a href="#product">product</a>
+    			<a href="#about">About</a>
+    			<a href="#contact">Contact me</a>
+  			</div>
+  			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    			<i class="fa fa-bars"></i>
+  			</a>
+		</div>
+	</nav>
+	<div class="home">
+		<div id="background"></div>
+		<div class="section">
+   			<h1 id="title" class="margin-top">Hello, my name is Ammam Aymen.</h1><br><br>
+   			<h2 class="less-margin">I am a full-stack web developer</h2>
+   			<br><h2> Feel free to take a look at my latest projects on <br>the web portfolio page. </h2>
+   		</div>
+   		<div class="design">
+   			<img src="code.svg" alt="coding" height="500">
+   		</div>
+   		<a href="#about"><div class="seemore">
+   			<i class="fa fa-angle-down"></i>
+   		</div></a>
+   	</div>
+
+   	<div class="About" id="about">
+   		<div class="section2">
+   			<h1 class="titre">About me</h1>
+   			<h2 class="titre1" >Ammam <span class="highlight">Aymen</span>.</h2>
+   			<div class="logo2">
+   				<img src="img10.png" alt="Aymen Ammam" >
+   			</div>
+  			<p class="titre">Master 2 in software engineering  at USDB. full-stack web developer and Designer  , I mobilize my energy to put my knowledge into practice and develop my skills.</p>
+		</div>
+   </div>
+   <div class="Portfolio" id="Portfolio1">	
+        <div class="Menu" id="Menu">
+        	<div class="porto">
+   				<h1 class="titre">web developer portfolio</h1>
+        		<h2 class="titre1">Here are a few design projects I've worked on recently. </h2>          
+        	</div>
+    		<div class="row"> 
+  				<div class="column">
+    				<img src="work/1.jpg" style="width:100%">
+    				<div class="overlay">
+    					<a href="../Gym/index.html"><div class="text" onclick="f1()">See More</div></a>
+  					</div>
+    			</div>
+    			<div class="column">	
+    				<img src="work/2.jpg" style="width:100%">
+    				<div class="overlay">
+    					<a href="../Gym/index.html"><div class="text" >See More</div></a>
+  					</div>
+				</div>
+				<div class="column">
+				    <img src="work/3.jpg" style="width:100%">
+				    <div class="overlay">
+    					<a href="../pidza/index.html"><div class="text">See More</div></a>
+  					</div>
+				</div>
+				<div class="column">
+				    <img src="work/4.jpg" style="width:100%">
+				    <div class="overlay">
+    					<a href="../smart security/index.html"><div class="text">See More</div></a>
+  					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="container" id="contact">
+        <div class="headline">
+          <h1>Contact Me</h1>
+        </div>
+        <div class="social-buttons">        
+        <!-- facebook  Button -->
+                <a  target="blank" class="social-margin"> 
+                  <div class="social-icon facebook">
+                    <i class="fa fa-phone" aria-hidden="true"></i> 
+                  </div>
+                  <p>Phone: +213 774179589</p>
+                </a>
+                <!-- Email Button -->
+                <a class="social-margin">
+                  <div class="social-icon Email">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </div>
+                  <p>Email: Aymenammam@gmail.com</p>
+                </a>
+          <!-- TwitterButton -->
+                <a class="social-margin">
+                  <div class="social-icon twitter">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>      
+                  </div> 
+                  <p>Address: Blida, Algeria</p>
+                </a>
+        </div>
+        <div class="social-buttons">        
+        <!-- facebook  Button -->
+                <a href="https://m.facebook.com/people/Aymen-Ammam/100006255790142" target="blank" class="social-margin"> 
+                  <div class="social-icon facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i> 
+                  </div>
+                </a>
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/aymen-ammam-b23b13138/" class="social-margin" target="blank">
+                  <div class="social-icon linkedin">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </div> 
+                </a>
+          <!-- TwitterButton -->
+                <a href="http://twitter.com/" target="blank" class="social-margin">
+                  <div class="social-icon twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </div> 
+                </a>
+        </div>
+        <p class="foot">Created by Aymen Ammam, 2021</p>
+        </div> 
+<script>
+	function myFunction() {
+  		var x = document.getElementById("myLinks");
+  		if (x.style.display === "block") {
+    		x.style.display = "none";
+  		} else {
+    		x.style.display = "block";
+  		}
+	}
+</script>        
+</body>
+</html>
