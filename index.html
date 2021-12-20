@@ -176,42 +176,6 @@ p {
 .column:hover .overlay {
   height: 100%;
 }
-.minnav {
-  display: none;
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-.minnav #myLinks {
-  display: none;
-}
-
-.minnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.minnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.minnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.minnav .active1 {
-  background-color: #5b2e9a;
-  color: white;
-}
 .text {
   border-style: solid;
   border-width: 2px;
@@ -226,6 +190,224 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+		.minnav {
+  display: none;
+  background-color: #222222;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 320px;
+  min-height: 568px;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1);
+}
+
+.menu-trigger, .close-trigger {
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 333;
+}
+.menu-trigger:hover .menu-trigger-bar:before, .close-trigger:hover .menu-trigger-bar:before {
+  width: 100%;
+}
+.menu-trigger:hover .close-trigger-bar:before, .close-trigger:hover .close-trigger-bar:before {
+  width: 100%;
+}
+
+.close-trigger {
+  z-index: 5;
+  top: 42px;
+}
+
+.menu-trigger-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 6px;
+  transform: rotate(-45deg);
+  position: relative;
+}
+.menu-trigger-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.menu-trigger-bar.top {
+  width: 50%;
+}
+.menu-trigger-bar.middle:before {
+  left: auto;
+  right: 0;
+}
+.menu-trigger-bar.bottom {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.close-trigger-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #222222;
+  position: relative;
+}
+.close-trigger-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.close-trigger-bar.left {
+  transform: translateX(100px) translateY(-100px) rotate(-45deg);
+}
+.close-trigger-bar.right {
+  transform: translateX(-100px) translateY(-100px) rotate(45deg);
+  top: -3px;
+}
+
+.logo {
+  display: block;
+  width: 90%;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  margin-top: -52px;
+  margin-left: -32px;
+
+  z-index: 10;
+}
+.logo span {
+  font-family: 'Roboto Condensed', sans-serif;
+text-transform: uppercase;
+  line-height: 30px;
+  color: white;
+}
+
+.logo-title {
+  text-align: center;
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 15px;
+  line-height: 82x;
+}
+
+.logo-badge {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+  right: -6px;
+  border-radius: 100%;
+  background-color: #6295ca;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+}
+
+.inner-container, .menu-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.inner-container {
+  z-index: 20;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: block;
+  width: 100%;
+  padding: 20%;
+}
+.menu li {
+  text-align: left;
+  display: block;
+  padding: 15px 0;
+}
+.menu a {
+  text-decoration: none;
+  color: #222222;
+  display: inline-block;
+  padding: 10px 0;
+  position: relative;
+}
+.menu a:hover:before {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.menu a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18px;
+  height: 4px;
+  opacity: 0;
+  background-color: #222222;
+  transform: translateX(100px);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.menu-bg {
+  position: absolute;
+  display: block;
+  width: 200%;
+  left: -53%;
+  top: -25%;
+  height: 40%;
+  background-color: white;
+}
+.menu-bg.middle {
+  top: 29%;
+  left: -53%;
+  transform: rotate(-45deg) scaleY(0);
+}
+.menu-bg.top {
+  left: -34%;
+  top: 0;
+  transform: rotate(-45deg) translateY(-152%);
+}
+.menu-bg.bottom {
+  top: 105%;
+  transform: rotate(-45deg) translateY(25%);
+  left: -20%;
 }
 .seemore {display: none;}
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -247,7 +429,7 @@ p {
   .navbar{display: none;}
   .minnav{display: block;}
   .section2{width: 100%;}
-  .home {background: #5b2e9a;}
+  .home {display: none;}
   .section h1 {color: white;}
   .section h2 {color: white;}
   .design{display: none;}
@@ -270,19 +452,43 @@ p {
     			<a href="#contact">Contact me</a>
 			</div>		
 		</div>
-		<!-- phone navigation bar-->
-		<div class="minnav">
-			<a href="#home" class="active1">Aymen</a>
-  			<div id="myLinks">
-    			<a href="#product">product</a>
-    			<a href="#about">About</a>
-    			<a href="#contact">Contact me</a>
-  			</div>
-  			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    			<i class="fa fa-bars"></i>
-  			</a>
-		</div>
 	</nav>
+	<div class="minnav">
+    <span class="menu-trigger">
+      <i class="menu-trigger-bar top"></i>
+      <i class="menu-trigger-bar middle"></i>
+      <i class="menu-trigger-bar bottom"></i>
+    </span>
+    <span class="close-trigger">
+      <i class="close-trigger-bar left"></i>
+      <i class="close-trigger-bar right"></i>
+    </span>
+    <span class="logo">
+      <span>
+        <i class="logo-title">Hello, my name is Ammam Aymen.<br>I am a full-stack web developer<br>Feel free to take a look at my latest projects on
+        the web portfolio page.</i>
+
+      </span>
+    </span>
+    <div class="inner-container">
+      <i class="menu-bg top"></i>
+      <i class="menu-bg middle"></i>
+      <i class="menu-bg bottom"></i>
+      <div class="menu-container">
+        <ul class="menu">
+          <li>
+            <a href="#about">About me</a>
+          </li>
+          <li>
+            <a href="#Portfolio1">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 	<div class="home">
 		<div id="background"></div>
 		<div class="section">
@@ -391,6 +597,10 @@ p {
         </div>
         <p class="foot">Created by Aymen Ammam, 2021</p>
         </div> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js'></script><script  src="./script.js"></script>
+<script>
 <script>
 	function myFunction() {
   		var x = document.getElementById("myLinks");
